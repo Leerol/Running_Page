@@ -228,6 +228,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
+          git remote set-url origin https://${{ secrets.ACTIONS_DEPLOY_KEY }}@github.com/Leerol/Running_Page.git
           git add .
           git commit -m 'update new runs' || echo "nothing to commit"
           git push || echo "nothing to push"
