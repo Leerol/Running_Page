@@ -25,6 +25,7 @@ on:
 permissions:
   pages: write
   id-token: write
+  contents: read
   
 env:
   # please change to your own config.
