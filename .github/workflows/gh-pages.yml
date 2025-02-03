@@ -78,16 +78,7 @@ jobs:
         run: corepack enable
 
       - name: Get pnpm store directory
-       shell: bash
-            |
-                 STORE_PATH=$(pnpm store path --silent)
-                 echo "STORE_PATH=$STORE_PATH" >> $GITHUB_ENV
-        run:     echo "Store path is $STORE_PATH"
-        
-      - name: Verify STORE_PATH
-        run: echo ${{ env.STORE_PATH }}
-
-      - name: Verify STORE_PATH
+        shell: bash
         run: |
           echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
 
