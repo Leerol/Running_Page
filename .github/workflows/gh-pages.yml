@@ -52,7 +52,7 @@ jobs:
           ref: master
 
       - name: Cache Data Files
-          if: ${{ inputs.save_data_in_github_cache }}
+        if: inputs.save_data_in_github_cache
         uses: actions/cache@v4
         with:
           path: |
